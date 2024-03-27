@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+NetCAfe- Checked
+{% endblock %}
+
+{% block main %}
+    <div class="text-box" style="width:50%; text-align:left; margin: auto;">
+        <h5 class="text">You have booked for</h5>
+        <p class="text">Id      = {{ ls[0] }}</p>
+        <p class="text">Name    = {{ ls[1] }}</p>
+        <p class="text">Date    = {{ ls[2] }}</p>
+        <p class="text">Session = {{ ls[3] }}</p>
+        <p class="text">Mail    = {{ ls[4] }}</p>
+        <p class="text">Note    = {{ ls[5] }}</p>
+    </div>
+
+{% endblock %}

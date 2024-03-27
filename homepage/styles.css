@@ -1,0 +1,50 @@
+body {
+    background-image: url("assets/bg.jpg");
+    background-color: #cccccc;
+}
+
+.nav-link {
+    color: white;
+    font-size: 18px;
+}
+
+.box {
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    background-color: black;
+}
+
+.box-text{
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+#e-effect {
+    display: inline;
+    text-decoration: underline;
+    text-decoration: bold;
+}
+
+#s-btn {
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    border: none;
+    outline: none;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#s-btn:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+NetCAfe- Booked
+{% endblock %}
+
+{% block main %}
+    <div class="text-box">
+    <h5 class="text">You have successfully booked for session <span style="color: red;">{{data[2]}}</span> on <span style="color: red;">{{data[1]}}</span>.
+    <br>
+    Your booking id is <span style="color: red;">{{data[0]}}</span>. You can recheck your booked information in booking page using id and email.</h5>
+    </div>
+{% endblock %}

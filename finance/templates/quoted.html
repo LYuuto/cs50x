@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+        <div class="mb-3">
+            A share of {{ result["name"] }}({{ result["symbol"] }}) costs {{ result["price"] }}.
+        </div>
+        <a class="btn btn-primary" href="/">Return</a>
+{% endblock %}

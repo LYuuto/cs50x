@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change password
+{% endblock %}
+
+{% block main %}
+    <form action="/changepw" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="old_pw" placeholder="Current password" type="password">
+            <input class="form-control mx-auto w-auto my-1" id="password" name="new_pw" placeholder="New password" type="password" minlength="8">
+            <input class="form-control mx-auto w-auto my-1" id="password" name="cfm_pw" placeholder="Reconfirm the new password" type="password">
+            <p class="my-1" style="color:red; font-size:80%;">( Password: minimum 8 characters required )</p>
+        </div>
+        <a class="btn btn-primary" href="/">Cancel</a>
+        <button class="btn btn-primary" type="submit">Change Password</button>
+    </form>
+{% endblock %}

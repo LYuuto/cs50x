@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+NetCAfe- Check
+{% endblock %}
+
+{% block main %}
+<h5 class="text"> Fill your booked info.</h5>
+<form action="/check" method="post">
+    <div class="container unselectable" style="width:70%;">
+        <table style="width:100%;">
+            <tr class="form-group">
+                <td class="form-text" style="width:15%;">Booking id</td>
+                <td><input class="from-control" autocomplete="off" name="id" placeholder="00" type="number" style="width:100%;" required min="0"></td>
+            </tr>
+            <tr class="form-group">
+                <td class="form-text">E-mail</td>
+                <td><input class="from-control" autocomplete="off" name="mail" placeholder="youremail@email.com" type="email" style="width:100%;" required></td>
+            </tr>
+
+        </table>
+
+        <a class="btn btn-primary" style="background-color:#ba4138; border:none;" href="/">Home</a>
+        <button class="btn btn-primary" style="background-color:#725534; border:none;" type="submit">Check!</button>
+    </div>
+</form>
+<p class="my-5">Need help? <a href="#">contact us</a>!</p>
+
+{% endblock %}

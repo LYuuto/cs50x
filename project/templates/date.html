@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+NetCAfe- Booking-date
+{% endblock %}
+
+
+{% block main %}
+    <h3 class="text">Booking for Conference Room</h3>
+    <p class="text">We offer a conference room accomodation for your meetings or gather-up with friends.</p>
+    <img src="static/meeting.jpg" style="width: 50%;">
+
+    <p class="text my-3">Choose the date! <span style="color: red;">You can book for a session between <span id="start"></span> and <span id="end"></span> in advance for today!</span></p>
+
+
+    <form action="/booking-dates" method="post">
+        <div class="container unselectable" style="width:70%; margin:auto;">
+            <h5 class="col" style="color: #725534;">Desired date</h5>
+            <input id="date" name="date" placeholder="mm/dd/yyyy" type="date" id="date" required>
+            <a class="btn btn-primary" style="background-color:#ba4138; border:none;" href="/">Cancel</a>
+            <button class="btn btn-primary" style="background-color:#725534; border:none;" type="submit">Continue</button>
+        </div>
+    </form>
+
+    <h5 class="my-3 text">Already booked? You can check your booking <a href="/check">here</a>!</h5>
+
+    <p class="my-5">Need help? <a href="#">contact us</a>!</p>
+
+    <script>
+        var today = new Date();
+        var dd = today.getDate() + 1;
+        var maxdd = today.getDate() + 7;
+        var mm = today.getMonth() + 1; //January is 0!
+        var yyyy = today.getFullYear();
+
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (maxdd < 10) {
+            dd = '0' + maxdd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+
+        today = yyyy + '-' + mm + '-' + dd;
+        maxday = yyyy + '-' + mm + '-' + maxdd;
+        document.getElementById("date").setAttribute("min", today);
+        document.getElementById("date").setAttribute("max", maxday);
+
+        today = mm + '-' + dd + '-' + yyyy;
+        maxday = mm + '-' + maxdd + '-' + yyyy;
+
+        document.getElementById("start").textContent=today;
+        document.getElementById("end").textContent=maxday;
+
+    </script>
+{% endblock %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GameWiki-weapons</title>
+    </head>
+    <body>
+
+        <div class="d-flex flex-row" style="border-bottom: 2px solid white; background-color: black;">
+            <nav class="navbar navbar-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            </nav>
+            <h1 class="header mx-auto my-1" style="color: white;">Generic Game Wikipedia</h1>
+        </div>
+
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link disabled" href="weapons.html">Weapons (now on)</a>
+                <a class="nav-link" href="elements.html">Elements</a>
+            </div>
+        </div>
+
+        <!-- ------ -->
+
+        <h3 class="my-3" style="color: white; text-align: center; text-decoration: underline;">Weapons</h3>
+
+        <div class="container my-3 d-flex justify-content-center">
+            <a class="align-text-bottom" href="sword.html">
+                <img src="assets/image-placeholder.jpg" style="width:300px;">
+                <p class="box-text" style="text-align: center; font-size: 25px;">Sword</p>
+            </a>
+        </div>
+
+        <div class="container my-3 d-flex justify-content-center">
+            <a class="align-text-bottom" style="pointer-events: none;" href="#">
+                <img src="assets/image-placeholder.jpg" style="width:300px;">
+                <p class="box-text" style="text-align: center; font-size: 25px;">Bow (comming soon)</p>
+            </a>
+        </div>
+
+        <button onclick="to_top()" id="s-btn">TOP</button>
+
+        <script>
+            function to_top(){
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+    </body>
+</html>

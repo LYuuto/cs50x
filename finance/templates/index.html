@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block main %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-start">Symbol</th>
+                    <th class="text-start">Name</th>
+                    <th>Shares</th>
+                    <th class="text-end">Price</th>
+                    <th class="text-end">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in symbol_dic.items() %}
+                <tr>
+                    <td class="text-start"> {{ key }} </td>
+                    <td class="text-start"> {{ value[0] }}      </td>
+                    <td> {{ value[1] }}      </td>
+                    <td class="text-end"> {{ value[2] }}      </td>
+                    <td class="text-end"> {{ value[3] }}      </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="border-0 text-end fw-bold" colspan="4">Cash</td>
+                    <td class="border-0 text-end"> {{ cash }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 text-end fw-bold" colspan="4">Total</td>
+                    <td class="border-0 text-end"> {{ total }}</td>
+                </tr>
+            </tfoot>
+        </table>
+{% endblock %}

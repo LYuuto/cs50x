@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+NetCAfe- Booking
+{% endblock %}
+
+
+{% block main %}
+
+<h5 class="text">Fill the form for the booking for <span style="color: red;">{{ date }}</span>.</h5>
+    <form action="/booking" method="post">
+        <div class="container unselectable" style="width:70%;">
+            <table style="width:100%;">
+                <tr class="form-group">
+                    <td class="form-text" style="width:15%;">Name</td>
+                    <td><input class="from-control" autocomplete="off" name="name" placeholder="Name" type="text" style="width:100%;" required></td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-text">Available sessions for the chosen day :</td>
+                    <td>
+                        <label>
+                            <input type="radio" id="0" name="session" value="0" required>
+                            9:00am-11:00am
+                          </label>
+
+                          <label>
+                            <input type="radio" id="1" name="session" value="1">
+                            1:00pm-3:00pm
+                          </label>
+
+                          <label>
+                            <input type="radio" id="2" name="session" value="2">
+                            4:00pm-6:00pm
+                          </label>
+                    </td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-text">E-mail</td>
+                    <td><input class="from-control" autocomplete="off" name="mail" placeholder="youremail@email.com" type="email" style="width:100%;" required></td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-text">Note</td>
+                    <td><textarea name="note" placeholder="Optional" style="height:100px"></textarea></td>
+                </tr>
+            </table>
+
+            <a class="btn btn-primary" style="background-color:#ba4138; border:none;" href="/booking-dates">Choose date again</a>
+            <button class="btn btn-primary" style="background-color:#725534; border:none;" type="submit">Book!</button>
+        </div>
+    </form>
+
+    <p class="my-5">Need help? <a href="#">contact us</a>!</p>
+
+    <script>
+        '{% for session in takensession %}'
+            document.getElementById('{{ session }}').disabled = true;
+        '{% endfor %}'
+    </script>
+
+
+{% endblock %}
