@@ -1,0 +1,14 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Comparing runtime of the same category(random, reversed), the runtime graph would go steeper, so it is safe
+to assume that its big O notations would n^2. But in sorted category, it took least runtime among all sorts, so its big omega notation
+would be n. So it should be the bubble sort.
+
+sort2 uses: Merge Sort
+
+How do you know?: Even in large data size of the categories, it shows fastest result among all sorts. It should b merge sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: Comparing runtime of the same category(random, reversed, sorted), the runtime graph would go steeper, so it is safe
+to assume that its big O and big omega notations would be n^2. So it should be selection sort.
